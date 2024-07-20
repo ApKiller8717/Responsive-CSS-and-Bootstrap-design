@@ -68,6 +68,25 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .left4,
+            .right4 {
+                width: 100%;
+            }
+
+            .left4 {
+                order: 1;
+            }
+
+            .right4 {
+                order: 2;
+            }
+        }
+
         @media (min-width: 768px) {
             .container {
                 max-width: 720px;
@@ -288,6 +307,14 @@
             border: none;
             padding: 1rem 2rem;
             border-radius: 5px;
+        }
+
+        .button4 {
+            background-color: #ffffff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+
         }
 
         .navbar-dark .navbar-toggler {
@@ -520,24 +547,131 @@
             padding: 20px;
         }
 
+        .text-center {
+            text-align: center;
+        }
 
-        @media screen and (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
+        span {
+            font-size: 3.5rem;
+        }
 
-            .left4,
-            .right4 {
-                width: 100%;
-            }
+        .prising1 {
+            background: #ffffff;
+            box-shadow: -10px 10px 26px #ededed;
+            padding: 35px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-            .left4 {
-                order: 1;
-            }
+        .prising2 {
+            background: #ffffff;
+            box-shadow: 0px 0px 40px 40px #ededed;
+            ;
+            z-index: 3;
 
-            .right4 {
-                order: 2;
-            }
+        }
+
+        .maincard {
+            padding: 0px 35px 35px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prising3 {
+            background: #ffffff;
+            box-shadow: 10px 10px 26px #ededed;
+            padding: 35px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prising {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .prising ul {
+            padding-left: 25px;
+        }
+
+        .prising ul li {
+            line-height: 28px;
+            list-style: url(./rightsign.svg);
+        }
+
+        .priseupper {
+            line-height: 30px;
+        }
+
+        .tabclass {
+            padding: 5px;
+            background: #ffffff;
+            box-shadow: 10px 10px 26px #ededed,
+                -10px -10px 26px #ffffff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .buttondefal1,
+        .buttondefal2 {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buttondefal1 {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .buttondefal2 {
+            background-color: #fff;
+            color: #000000;
+        }
+
+        .buttondefal1:hover,
+        .buttondefal2:hover {
+            background-color: #CCFF8B;
+            color: #000000;
+        }
+
+        .buttondefal1.active,
+        .buttondefal2.active {
+            background-color: #CCFF8B;
+            color: #000000;
+        }
+
+
+        .headercards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .p-0 {
+            margin: 0;
+        }
+
+        .topper {
+            background-color: #12141D;
+            color: #ffffff;
+            text-align: center;
         }
     </style>
 </head>
@@ -683,7 +817,7 @@
                     <button class="tablinks" onclick="openCity(event, 'LoadBalancers')">Load Balancers</button>
                     <button class="tablinks" onclick="openCity(event, 'FloatingIPS')">Floating IPS</button>
                 </div>
-                
+
                 <div id="BlockStorage" class="tabcontent">
                     <div class="content-wrapper">
                         <div class="right4 text-light">
@@ -733,6 +867,168 @@
         </div>
     </div>
 
+    <!-- Prising Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="text-center headercards py-3">
+                    <h2>Choose your perfect web hosting plan</h2>
+                    <p class="py-2">Each web hosting plan comes with a free domain name</p>
+                    <div class="tabclass">
+                        <button class="buttondefal1" onclick="openPrice(event, 'Monthly')"
+                            id="defaultOpen">Monthly</button>
+                        <button class="buttondefal2" onclick="openPrice(event, 'Yearly')">Yearly</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tabcontent1" id="Monthly">
+                <div class="prising">
+                    <div class="prising1">
+                        <div class="priseupper text-center">
+                            <img src="./rocket-12245.svg" style="width: 25px;" alt="">
+                            <h6>START UP</h6>
+                            <p>Best for small business owners</p>
+                            <h3>$<span>99</span>/mo</h3>
+                        </div>
+                        <div class="feacturelist pt-2">
+                            <ul>
+                                <li>2x CPU Power</li>
+                                <li>Free Migration</li>
+                                <li>Limited Reporting</li>
+                                <li>50GB ALL SSD Storage</li>
+                            </ul>
+                        </div>
+                        <div class="bottomgrp text-center pt-3">
+                            <button class="button2">Start 14 Day Trial</button>
+                            <p class="p-0">No credit card required</p>
+                        </div>
+                    </div>
+                    <div class="prising2">
+                        <div class="topper">
+                            <p>MOST POPULAR</p>
+                        </div>
+                        <div class="maincard">
+                            <div class="priseupper text-center">
+                                <img src="./lightning-bolt-4128.svg" style="width: 30px;" alt="">
+                                <h6>AGENCY</h6>
+                                <p>Best for medium agencies</p>
+                                <h3>$<span>199</span>/mo</h3>
+                            </div>
+                            <div class="feacturelist pt-2">
+                                <ul>
+                                    <li>16x CPU Power</li>
+                                    <li>Free Migration</li>
+                                    <li>Unlimited Websites</li>
+                                    <li>100GB ALL SSD Storage</li>
+                                    <li>Shared environment</li>
+                                    <li>Unlimited Bandwidth</li>
+                                </ul>
+                            </div>
+                            <div class="bottomgrp text-center pt-3">
+                                <button class="button2" style="font-weight: 600;">Start 14 Day Trial</button>
+                                <p class="p-0">No credit card required</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prising1">
+                        <div class="priseupper text-center">
+                            <img src="./eye-glasses-icon.svg" style="width: 30px;" alt="">
+                            <h6>START UP</h6>
+                            <p>Best for small business owners</p>
+                            <h3>$<span>99</span>/mo</h3>
+                        </div>
+                        <div class="feacturelist pt-2">
+                            <ul>
+                                <li>2x CPU Power</li>
+                                <li>Free Migration</li>
+                                <li>Limited Reporting</li>
+                                <li>50GB ALL SSD Storage</li>
+                            </ul>
+                        </div>
+                        <div class="bottomgrp text-center pt-3">
+                            <button class="button4">Start 14 Day Trial</button>
+                            <p class="p-0">No credit card required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tabcontent1" id="Yearly">
+                <div class="prising">
+                    <div class="prising1">
+                        <div class="priseupper text-center">
+                            <img src="./rocket-12245.svg" style="width: 25px;" alt="">
+                            <h6>START UP</h6>
+                            <p>Best for small business owners</p>
+                            <h3>$<span>299</span>/year</h3>
+                        </div>
+                        <div class="feacturelist pt-2">
+                            <ul>
+                                <li>2x CPU Power</li>
+                                <li>Free Migration</li>
+                                <li>Limited Reporting</li>
+                                <li>50GB ALL SSD Storage</li>
+                            </ul>
+                        </div>
+                        <div class="bottomgrp text-center pt-3">
+                            <button class="button2">Start 14 Day Trial</button>
+                            <p class="p-0">No credit card required</p>
+                        </div>
+                    </div>
+                    <div class="prising2">
+                        <div class="topper">
+                            <p>MOST POPULAR</p>
+                        </div>
+                        <div class="maincard">
+                            <div class="priseupper text-center">
+                                <img src="./lightning-bolt-4128.svg" style="width: 30px;" alt="">
+                                <h6>AGENCY</h6>
+                                <p>Best for medium agencies</p>
+                                <h3>$<span>499</span>/year</h3>
+                            </div>
+                            <div class="feacturelist pt-2">
+                                <ul>
+                                    <li>16x CPU Power</li>
+                                    <li>Free Migration</li>
+                                    <li>Unlimited Websites</li>
+                                    <li>100GB ALL SSD Storage</li>
+                                    <li>Shared environment</li>
+                                    <li>Unlimited Bandwidth</li>
+                                </ul>
+                            </div>
+                            <div class="bottomgrp text-center pt-3">
+                                <button class="button2" style="font-weight: 600;">Start 14 Day Trial</button>
+                                <p class="p-0">No credit card required</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prising1">
+                        <div class="priseupper text-center">
+                            <img src="./eye-glasses-icon.svg" style="width: 30px;" alt="">
+                            <h6>START UP</h6>
+                            <p>Best for small business owners</p>
+                            <h3>$<span>299</span>/year</h3>
+                        </div>
+                        <div class="feacturelist pt-2">
+                            <ul>
+                                <li>2x CPU Power</li>
+                                <li>Free Migration</li>
+                                <li>Limited Reporting</li>
+                                <li>50GB ALL SSD Storage</li>
+                            </ul>
+                        </div>
+                        <div class="bottomgrp text-center pt-3">
+                            <button class="button4">Start 14 Day Trial</button>
+                            <p class="p-0">No credit card required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buildteam js -->
     <script>
         function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
@@ -748,8 +1044,31 @@
             evt.currentTarget.className += " active";
         }
 
-        // Default open tab
         document.getElementsByClassName("tablinks")[0].click();
+    </script>
+
+    <!-- Prising js -->
+    <script>
+        function openPrice(evt, priceType) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent1");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("buttondefal1");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            tablinks = document.getElementsByClassName("buttondefal2");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(priceType).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Default open tab
+        document.getElementById("defaultOpen").click();
     </script>
 
 </body>
