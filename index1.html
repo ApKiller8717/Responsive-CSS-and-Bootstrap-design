@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Customize</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (max-width: 575.98px) {
+            .container {
+                max-width: 100%;
+            }
+
+            .left2 {
+                text-align: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+
+            .card {
+                flex: 1 1 48%;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left2 {
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+
+            .btngroup {
+                display: flex;
+                gap: 10px;
+            }
+
+            .card {
+                flex: 1 1 31%;
+            }
+
+            .text-dark {
+                width: 100%;
+            }
+
+            .btngroup button {
+                width: auto;
+                flex: 1;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .left2 {
+                text-align: center;
+                align-items: center;
+            }
+
+            .left3 {
+                text-align: center;
+            }
+
+            .uppersec1 .hostingp {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+
+            .navbar-expand-lg .navbar-toggler {
+                display: none;
+            }
+
+            .card {
+                flex: 1 1 23%;
+                /* Four cards per row */
+            }
+
+            .text-dark {
+                width: 75%;
+            }
+
+            .hostingp {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+
+            .left2 {
+                width: 50%;
+                align-self: center;
+            }
+
+            .left3 {
+                width: 50%;
+                align-content: center;
+            }
+
+            .right3 {
+                width: 50%;
+            }
+
+            .right2 {
+                width: 50%;
+            }
+
+            .left4 {
+                width: 30%;
+            }
+
+            .right4 {
+                width: 70%;
+            }
+
+            .row1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .uppersec1 .hostingp {
+                width: 48%;
+                text-align: left;
+                align-content: flex-end;
+            }
+
+            .uppersec1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .text-dark {
+                width: 55%;
+            }
+        }
+
+        .uppersec2 {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tabcontent {
+            display: flex;
+            padding: 30px 0px;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .reverceclass {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .align-item-center {
+            align-items: center;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .navbar {
+            padding: .5rem 1rem;
+            background-color: #12141D;
+        }
+
+        .navbar-nav {
+            list-style: none;
+        }
+
+        .text-decoration-none {
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .btn {
+            padding: .8rem 1rem;
+            border-radius: 5px;
+        }
+
+        .transparent {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+
+        .button1 {
+            background-color: #CCFF8B;
+            border: none;
+        }
+
+        .button2 {
+            background-color: #CCFF8B;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+        }
+
+        .button3 {
+            background-color: #ffffff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+        }
+
+        .navbar-dark .navbar-toggler {
+            color: rgba(255, 255, 255, .5);
+            border-color: rgba(255, 255, 255, .1);
+        }
+
+        .navbar-toggler {
+            padding: .25rem .75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            display: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+
+        .row {
+            margin-bottom: 1rem;
+        }
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            content: "";
+            background: no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .navbar-collapse {
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            display: inline-block;
+            padding-top: .3125rem;
+            padding-bottom: .3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+        }
+
+        .bg-dark {
+            background-color: #12141D;
+        }
+
+        .py-2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .px-2 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .pt-3 {
+            padding-top: 30px;
+        }
+
+        .py-1 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .py-3 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .px-3 {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .px-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .pt-2 {
+            padding-top: 20px;
+        }
+
+        .pt-1 {
+            padding-top: 10px;
+        }
+
+        .pb-2 {
+            padding-bottom: 20px;
+        }
+
+        .pb-1 {
+            padding-bottom: 10px;
+        }
+
+        .text-light {
+            color: #ffffff;
+        }
+
+        .btngroup button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin-bottom: .5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .gap-3 {
+            gap: 20px;
+        }
+
+        .cardgroup {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .row2 {
+            text-align: -webkit-center;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            flex-grow: 1;
+        }
+
+        .icon-small {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .py-5 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .px-5 {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .tabs {
+            margin-top: 2rem;
+        }
+
+        .tab {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: #a0a0a0;
+        }
+
+        .tab button:hover {
+            background-color: #575757;
+        }
+
+        .tab button.active {
+            background-color: #12141D;
+            color: #CCFF8B;
+            border-bottom: 1px solid #CCFF8B;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left4 {
+            width: 30%;
+        }
+
+        .right4 {
+            width: 60%;
+            padding: 20px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .left4,
+            .right4 {
+                width: 100%;
+            }
+
+            .left4 {
+                order: 1;
+            }
+
+            .right4 {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="container d-flex align-item-center justify-content-between">
+            <a class="navbar-brand" href="#"><img src="./Logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                arial-controls="navbarNav" arial-expanded="false" arial-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-flex" style="gap: 30px;" id="navbarNav">
+                <ul class="navbar-nav d-flex align-item-center" id="navbarNav" style="gap: 20px;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Demos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchbtn">
+                <button class="btn transparent">Login</button>
+                <button class="btn button1">Get Started Free</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-dark py-2">
+        <section class="container">
+            <div class="row1">
+                <div class="left2" style="display:flex; flex-direction:column ">
+                    <h1 class="text-light py-1">Organized cloud<br> and web hosting <br> for your business</h1>
+                    <p class="text-light pb-1">Unlimited Domain & Hosting in One Platform. Website hosting options,
+                        99.9% uptime guarantee, free SSL certificate, WrodPress instails.</p>
+                    <div class="btngroup d-flex gap-3">
+                        <button class="button2" type="submit">Get Start</button>
+                        <button class="button3" type="submit">View Packages</button>
+                    </div>
+                </div>
+                <div class="right2">
+                    <img src="./Layer1.svg" style="width: 100%; height:auto" alt="Herobar">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row2 py-2">
+                <h2 class="text-dark">These features make your hosting work faster</h2>
+                <p class="text-dark">Make your visitors happy and reduce website loading time. Take full advantage of
+                    speed and power.</p>
+            </div>
+            <div class="row">
+                <div class="cardgroup">
+                    <div class="card" style="border-bottom: 5px solid #12141D; border-radius:0px;">
+                        <div class="card-body">
+                            <img src="./cloudreset.svg" class="icon-small" alt="...">
+                            <h5 class="card-title">Remote Daily Backup</h5>
+                            <p class="card-text">Your website data is always secure & protected with automatic daily
+                                backups and easily restore data with 1 click.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="border-bottom: 5px solid #CCFF8B; border-radius:0px;">
+                        <div class="card-body">
+                            <img src="./shild.svg" class="icon-small" alt="...">
+                            <h5 class="card-title">Worldwide Cybersecurity</h5>
+                            <p class="card-text">Ultimate cybersecurity it blocks 99.98% of web attacks and monitors
+                                your real website 24/7, real-time worldwidely.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="border-bottom: 5px solid #12141D; border-radius:0px;">
+                        <div class="card-body">
+                            <img src="./database.svg" class="icon-small" alt="...">
+                            <h5 class="card-title">Scale to Success</h5>
+                            <p class="card-text">We are committed to deliver practical performance, ironclad security
+                                and seamless scalability for your websites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hosting Section -->
+    <div class="bg-dark py-5">
+        <div class="container">
+            <div class="uppersec1 text-light">
+                <h2 class="hostingp py-1">Your websites deserve fast, secure and also reliable hosting</h2>
+                <p class="hostingp py-1">Focus on your business and avoid all the web hosting hassles.
+                    Our managed hosting guarantees unmatched performance, reliability and choice with 24/7 support that
+                    acts as your extended team, making Cloudways.</p>
+            </div>
+            <div class="imgsec pt-3">
+                <img src="./dashboard1.png" style="width: 100%;" alt="Dashboard_Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="bg-dark py-3">
+        <div class="container reverceclass">
+            <div class="left3 text-light">
+                <h2 class="py-1">Lets get rid of worries about web hosting to save your time
+                </h2>
+                <p class="py-1">We offer expert 24/7/365 problem-solving for everyone. For a closer partnership, choose
+                    the Advanced Support add-on that enhances your support experience and work as an extension of your
+                    in-house team.</p>
+                <button class="button2">Explore Now</button>
+            </div>
+            <div class="right3 py-2">
+                <img src="./Layer2.svg" style="width: 100%;" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Build Team -->
+    <div class="bg-dark py-5">
+        <div class="container">
+            <div class="uppersec2 text-light">
+                <h2 class="py-1">Innovative hosting platform built team empowerment</h2>
+                <p class="py-1">Our migration specialists will migrate as many websites as you ask, free of charge.
+                    There will be no downtime, and we'll also ensure that they work properly.</p>
+            </div>
+            <div class="tabs">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'BlockStorage')">Block Storage</button>
+                    <button class="tablinks" onclick="openCity(event, 'LoadBalancers')">Load Balancers</button>
+                    <button class="tablinks" onclick="openCity(event, 'FloatingIPS')">Floating IPS</button>
+                </div>
+                
+                <div id="BlockStorage" class="tabcontent">
+                    <div class="content-wrapper">
+                        <div class="right4 text-light">
+                            <h2 class="py-1">Block Storage</h2>
+                            <p class="py-1">Block storage is an approach to data storage in which each storage volume
+                                acts as an individual hard drive configured by the storage administrator. In the block
+                                storage model, data is saved to the storage media in fixed-sized blocks.</p>
+                            <button class="button2">Explore Now</button>
+                        </div>
+                        <div class="left4">
+                            <img src="./Layer3.svg" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="LoadBalancers" class="tabcontent">
+                    <div class="content-wrapper">
+                        <div class="right4 text-light">
+                            <h2 class="py-1">Load Balancers</h2>
+                            <p class="py-1">Load balancers are devices that distribute network or application traffic
+                                across multiple servers. They help to ensure that no single server becomes overwhelmed
+                                and that traffic is distributed efficiently.</p>
+                            <button class="button2">Explore Now</button>
+                        </div>
+                        <div class="left4">
+                            <img src="./Layer3.svg" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="FloatingIPS" class="tabcontent">
+                    <div class="content-wrapper">
+                        <div class="right4 text-light">
+                            <h2 class="py-1">Floating IPS</h2>
+                            <p class="py-1">Floating IPs are publicly accessible IP addresses that can be dynamically
+                                reassigned to any compute instance. They provide a way to route external traffic to your
+                                internal resources.</p>
+                            <button class="button2">Explore Now</button>
+                        </div>
+                        <div class="left4">
+                            <img src="./Layer3.svg" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+
+        // Default open tab
+        document.getElementsByClassName("tablinks")[0].click();
+    </script>
+
+</body>
+
+</html>
