@@ -37,6 +37,16 @@
             h1 {
                 font-size: 2rem;
             }
+            .userimg
+            {
+                text-align: center;
+            }
+            .userimg img
+            {
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
 
             h2 {
                 font-size: 2rem;
@@ -61,18 +71,16 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .left2 {
-                text-align: center;
-                align-items: center;
-            }
-        }
-
+        
         @media (max-width: 768px) {
             .content-wrapper {
                 flex-direction: column;
             }
-
+            
+            .left2 {
+                text-align: center;
+                align-items: center;
+            }
             .left4,
             .right4 {
                 width: 100%;
@@ -80,11 +88,20 @@
 
             .left4 {
                 order: 1;
+                width: 100%;
             }
 
             .right4 {
                 order: 2;
+                width: 100%;    
             }
+            .boxsec
+            {
+                text-align: center;
+                gap: 20px;
+                justify-content: center;
+            }
+          
         }
 
         @media (min-width: 768px) {
@@ -95,6 +112,12 @@
             .btngroup {
                 display: flex;
                 gap: 10px;
+            }
+            .userimg img
+            {
+                width: 60%;
+                height: auto;
+                text-align: center;
             }
 
             .card {
@@ -132,6 +155,11 @@
             .uppersec1 .hostingp {
                 text-align: center;
             }
+            .boxsec
+            {
+                justify-content: center;
+                gap: 20px;
+            }
         }
 
         @media (min-width: 992px) {
@@ -141,6 +169,24 @@
 
             .navbar-expand-lg .navbar-toggler {
                 display: none;
+            }
+            .userimg
+            {
+                text-align: center;
+            }
+            .boxsec
+            {
+                justify-content: space-between;
+            }
+            
+            .userimg img
+            {
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+            .grid-container .item-2:first-child {
+                order: 2;
             }
 
             .card {
@@ -169,6 +215,16 @@
             .container {
                 max-width: 1140px;
             }
+            .userimg img
+            {
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+            .boxsec
+            {
+                justify-content: space-between;
+            }
 
             .left2 {
                 width: 50%;
@@ -191,8 +247,9 @@
             .left4 {
                 width: 30%;
             }
-
+            
             .right4 {
+                padding: 20px;
                 width: 70%;
             }
 
@@ -315,11 +372,11 @@
             padding: 1rem 2rem;
             border-radius: 5px;
         }
-        .button4:hover
-        {
+
+        .button4:hover {
             background-color: #CCFF8B;
             transition: 0.5s;
-            transform: translate3d(-10px);
+            transform: translateY(-10px);
             box-shadow: 0px 5px 5px 5px rgb(207, 207, 207);
         }
 
@@ -336,10 +393,6 @@
             background-color: transparent;
             border: 1px solid transparent;
             border-radius: .25rem;
-        }
-
-        .row {
-            margin-bottom: 1rem;
         }
 
         button,
@@ -544,15 +597,6 @@
             justify-content: space-between;
         }
 
-        .left4 {
-            width: 30%;
-        }
-
-        .right4 {
-            width: 60%;
-            padding: 20px;
-        }
-
         .text-center {
             text-align: center;
         }
@@ -679,10 +723,110 @@
             color: #ffffff;
             text-align: center;
         }
+
+
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+
+        .grid-item {
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .item-1 {
+            grid-column: 1;
+            grid-row: 1 / 4;
+        }
+
+        .item-2 {
+            grid-column: 2;
+            grid-row: 2 / 5;
+        }
+
+        .item-3 {
+            grid-column: 3;
+            grid-row: 1 / 4;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .item-1 {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+                text-align: center;
+                justify-self: center;
+            }
+
+            .item-2 {
+                grid-column: 1 / span 2;
+                grid-row: 2;
+                text-align: center;
+                justify-self: center;
+            }
+
+            .item-3 {
+                grid-column: 1 / span 2;
+                grid-row: 3;
+                text-align: center;
+                justify-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .item-1,
+            .item-2,
+            .item-3 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+        .boxsec
+        {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: #CCFF8B;
+            border-radius: 10px;
+        }
+        .darkbtn
+        {
+            background-color: #12141D;
+            color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            height: fit-content;
+            padding: 15px 40px;
+        }
+        .footer
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
+    <!--+===========================================+-->
+    <!---===================HTML====================--->
+    <!--+===========================================+-->
     <!-- NavBar -->
     <nav class="navbar">
         <div class="container d-flex align-item-center justify-content-between">
@@ -1034,6 +1178,133 @@
         </div>
     </div>
 
+    <!-- Customers Section -->
+    <div class="customers bg-dark" id="customers">
+        <div class="row justify-content-center py-5">
+            <div class="col-md-6 text-center">
+                <h2 class="text-light">See what these customers have to say</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="usercol">
+                <div class="row justify-content-center  grid-container">
+
+                    <div class="grid-item item-1">
+                        <div class="userimg">
+                            <img src="./user1.png" class="py-1" alt="User 1">
+                        </div>
+                        <div class="userdescription">
+                            <p class="text-light">"I cannot believe that I have got a brand new landing page after
+                                getting Omega. It was super easy to edit and faster and easier to work & increases
+                                our exposure."</p>
+                            <h5 class="text-light">Jenny Wilson</h5>
+                            <p class="text-light">Chief Marketing Officer</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-item item-2">
+                        <div class="userdescription">
+                            <p class="text-light">"Awesome experience working with the team at Heroes of Digital!
+                                Always very responsive and continuously gives us suggestions to improve our
+                                business."</p>
+                            <h5 class="text-light">Jacob Jones</h5>
+                            <p class="text-light">Co-Founder</p>
+                        </div>
+                        <div class="userimg">
+                            <img src="./user2.png" class="py-1" alt="User 2">
+                        </div>
+                    </div>
+
+                    <div class="grid-item item-3">
+                        <div class="userimg">
+                            <img src="./user3.png" class="py-1" alt="User 3">
+                        </div>
+                        <div class="userdescription">
+                            <p class="text-light">"You made it so simple. My new site is so much faster and easier
+                                to work with than my old site. I just choose the page, make the change & it is a
+                                good channel for us."</p>
+                            <h5 class="text-light">Leslie Alexander</h5>
+                            <p class="text-light">Founder</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Box Section -->
+     <div class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col boxsec">
+                    <h2 style="width: 31rem;">Stop worrying about hosting problem</h2>
+                    <button class="darkbtn">Sign Up Now</button>
+                </div>
+            </div>
+         </div>
+     </div>
+
+    <!-- Footer Section -->
+     <div class="bg-dark py-5">
+        <div class="container">
+            <div class="row footer">
+
+                <div class="footeritem">
+                    <div class="headertitle"><h3>Company</h3></div>
+                    <div class="footerlist">
+                        <ul class="list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footeritem">
+                    <div class="headertitle"><h3>Help</h3></div>
+                    <div class="footerlist">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Delivery Details</a></li>
+                            <li><a href="#">terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footeritem">
+                    <div class="headertitle"><h3>Resources</h3></div>
+                    <div class="footerlist">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Free eBooks</a></li>
+                            <li><a href="#">Development Tutorial</a></li>
+                            <li><a href="#">How to - Blog</a></li>
+                            <li><a href="#">Youtube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footeritem">
+                    <div class="headertitle"><h3>Links</h3></div>
+                    <div class="footerlist">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Free eBooks</a></li>
+                            <li><a href="#">Development Tutorial</a></li>
+                            <li><a href="#">How to - Blog</a></li>
+                            <li><a href="#">Youtube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+    
+    <!--+===========================================+-->
+    <!---===============Java Script=================--->
+    <!--+===========================================+-->
     <!-- Buildteam js -->
     <script>
         function openCity(evt, cityName) {

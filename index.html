@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,59 @@
         .h1class {
             font-size: 3.8rem;
         }
+
         .btngroup button {
             width: 100%;
             margin-bottom: 10px;
         }
+
         @media (min-width: 768px) {
             .btngroup {
                 display: flex;
                 gap: 10px;
             }
+
             .btngroup button {
                 width: auto;
                 flex: 1;
             }
         }
+
         .card-icon {
             width: 50px;
             height: 50px;
             margin-right: 15px;
             float: left;
         }
+
         .card-body h5,
         .card-body p {
             margin-left: 70px;
             /* Adjust based on icon size */
         }
+
         .card-body {
             display: flex;
             align-items: center;
         }
+
         .card-text {
             margin-bottom: 0;
         }
+
         .card-body p {
             margin-left: 0px;
         }
+
         .card-body h5 {
             margin-left: 0px;
         }
+
         .custom-card1 {
             border-bottom: 5px solid #12141D;
             border-radius: 0px;
         }
+
         .custom-card2 {
             border-bottom: 5px solid #ccff8b;
             border-radius: 0px;
@@ -59,7 +71,7 @@
         .nav-tabs {
             overflow: hidden;
             text-align: center;
-            border:none !important;
+            border: none !important;
         }
 
         .nav-tabs a {
@@ -74,17 +86,68 @@
         }
 
         .nav-tabs a:hover {
-            background-color: #575757;
+            background-color: #ccff8b;
         }
 
         .nav-tabs a.active {
-            background-color: #12141D !important;
-            color: #CCFF8B !important;
-            border-bottom: 2px solid #CCFF8B !important;
+            background-color: #ccff8b !important;
+            color: #000000 !important;
         }
 
+        .customtab {
+            padding: 10px;
+            background: #ffffff;
+            box-shadow: 10px 10px 26px #ededed,
+                -10px -10px 26px #ffffff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+
+        .list-custom {
+            list-style: url(./rightsign.svg);
+        }
+
+        .z-index-1 {
+            z-index: 1;
+        }
+
+        .z-index-2 {
+            z-index: 2;
+        }
+
+        .z-index-3 {
+            z-index: 3;
+        }
+
+        .grid-item {
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 992px) {
+            .grid-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-item {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #12141d;">
@@ -235,25 +298,29 @@
         </div>
     </div>
 
-    <!-- Graph Section -->
+    <!-- Tab Section -->
     <div class="py-5" style="background-color: #12141d;">
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5 text-center">
                     <h2 class="text-light">Innovative hosting platform built team empowerment</h2>
-                    <p class="text-light">Our migration specialists will migrate as many websites as you ask, free of charge.
+                    <p class="text-light">Our migration specialists will migrate as many websites as you ask, free of
+                        charge.
                         There will be no downtime, and we'll also ensure that they work properly.</p>
                 </div>
             </div>
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home-tab-pane" role="tab" aria-controls="home-tab-pane" aria-selected="true">Block Storage</a>
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home-tab-pane" role="tab"
+                        aria-controls="home-tab-pane" aria-selected="true">Block Storage</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile-tab-pane" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Load Balancers</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile-tab-pane" role="tab"
+                        aria-controls="profile-tab-pane" aria-selected="false">Load Balancers</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact-tab-pane" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Floating IPS</a>
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact-tab-pane" role="tab"
+                        aria-controls="contact-tab-pane" aria-selected="false">Floating IPS</a>
                 </li>
             </ul>
             <div class="tab-content text-light" id="myTabContent">
@@ -261,7 +328,9 @@
                     <div class="row py-5 justify-content-center align-items-center">
                         <div class="col-md-8 py-5">
                             <h2 class="py-3">Block Storage</h2>
-                            <p class="py-3">Block storage is an approach to data storage in which each storage volume acts as an individual hard drive configured by the storage administrator. In the block storage model, data is saved to the storage media in fixed-sized blocks.</p>
+                            <p class="py-3">Block storage is an approach to data storage in which each storage volume
+                                acts as an individual hard drive configured by the storage administrator. In the block
+                                storage model, data is saved to the storage media in fixed-sized blocks.</p>
                             <button class="btn py-2 px-4" style="background-color: #ccff8b;">Explore Now</button>
                         </div>
                         <div class="col-md-4 py-5">
@@ -273,7 +342,9 @@
                     <div class="row py-5 justify-content-center align-items-center">
                         <div class="col-md-8 py-5">
                             <h2 class="py-3">Load Balancers</h2>
-                            <p class="py-3">Load balancers are devices that distribute network or application traffic across multiple servers. They help to ensure that no single server becomes overwhelmed and that traffic is distributed efficiently.</p>
+                            <p class="py-3">Load balancers are devices that distribute network or application traffic
+                                across multiple servers. They help to ensure that no single server becomes overwhelmed
+                                and that traffic is distributed efficiently.</p>
                             <button class="btn py-2 px-4" style="background-color: #ccff8b;">Explore Now</button>
                         </div>
                         <div class="col-md-4 py-5">
@@ -285,7 +356,9 @@
                     <div class="row py-5 justify-content-center align-items-center">
                         <div class="col-md-8 py-5">
                             <h2 class="py-3">Floating IPS</h2>
-                            <p class="py-3">Floating IPs are publicly accessible IP addresses that can be dynamically reassigned to any compute instance. They provide a way to route external traffic to your internal resources.</p>
+                            <p class="py-3">Floating IPs are publicly accessible IP addresses that can be dynamically
+                                reassigned to any compute instance. They provide a way to route external traffic to your
+                                internal resources.</p>
                             <button class="btn py-2 px-4" style="background-color: #ccff8b;">Explore Now</button>
                         </div>
                         <div class="col-md-4 py-5">
@@ -297,9 +370,245 @@
         </div>
     </div>
 
-    
+    <!-- Prising Section -->
+    <div class="container-fluid py-5" id="pricing">
+        <div class="container py-5">
+            <div class="row py-5 justify-content-center flex-column align-items-center">
+                <h2>Choose your perfect web hosting plan</h2>
+                <p class="py-2">Each web hosting plan comes with a free domain name</p>
+                <div class="nav nav-tabs customtab" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="monthly-tab" data-toggle="tab" href="#monthly" role="tab"
+                        aria-controls="monthly" aria-selected="true">Monthly</a>
+                    <a class="nav-link" id="yearly-tab" data-toggle="tab" href="#yearly" role="tab"
+                        aria-controls="yearly" aria-selected="false">Yearly</a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="nav-tabContent">
+
+                <div class="tab-pane fade show active" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                    <div class="row py-5 justify-content-center align-items-center">
+                        <div class="col-md-4 py-3 z-index-1">
+                            <div class="card shadow border-0">
+                                <div class="card-body text-center flex-column">
+                                    <img src="./rocket-12245.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>99</span>/mo</h3>
+                                </div>
+                                <ul class="list-group list-custom list-group-flush">
+                                    <li class="list-group-item border-0">1 Website</li>
+                                    <li class="list-group-item border-0">10GB SSD Storage</li>
+                                    <li class="list-group-item border-0">Unlimited Bandwidth</li>
+                                    <li class="list-group-item border-0">Unlimited Email Accounts</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #F4F4F5;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 py-3  z-index-2">
+                            <div class="card shadow-lg border-0">
+                                <div class="card-header bg-dark text-light text-center">
+                                    <p class="mb-0">MOST POPULAR</p>
+                                </div>
+                                <div class="card-body text-center flex-column">
+                                    <img src="./lightning-bolt-4128.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>199</span>/mo</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">16x CPU Power</li>
+                                    <li class="list-group-item border-0">Free Migration</li>
+                                    <li class="list-group-item border-0">Unlimited Websites</li>
+                                    <li class="list-group-item border-0">100GB ALL SSD Storage</li>
+                                    <li class="list-group-item border-0">Shared environment</li>
+                                    <li class="list-group-item border-0">Unlimited Bandwidth</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #ccff8b;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 py-3 z-index-1">
+                            <div class="card shadow border-0">
+                                <div class="card-body text-center flex-column">
+                                    <img src="./eye-glasses-icon.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>99</span>/mo</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">2x CPU Power</li>
+                                    <li class="list-group-item border-0">Free Migration</li>
+                                    <li class="list-group-item border-0">Limited Reporting</li>
+                                    <li class="list-group-item border-0">50GB ALL SSD Storage</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #F4F4F5;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+                    <div class="row py-5 justify-content-center align-items-center">
+                        <div class="col-md-4 py-3 z-index-1">
+                            <div class="card border-0 shadow">
+                                <div class="card-body text-center flex-column">
+                                    <img src="./rocket-12245.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>299</span>/year</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">1 Website</li>
+                                    <li class="list-group-item border-0">10GB SSD Storage</li>
+                                    <li class="list-group-item border-0">Unlimited Bandwidth</li>
+                                    <li class="list-group-item border-0">Unlimited Email Accounts</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #F4F4F5;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 py-3 z-index-3">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-header bg-dark text-light text-center">
+                                    <p class="mb-0">MOST POPULAR</p>
+                                </div>
+                                <div class="card-body text-center flex-column">
+                                    <img src="./lightning-bolt-4128.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>499</span>/year</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">16x CPU Power</li>
+                                    <li class="list-group-item border-0">Free Migration</li>
+                                    <li class="list-group-item border-0">Unlimited Websites</li>
+                                    <li class="list-group-item border-0">100GB ALL SSD Storage</li>
+                                    <li class="list-group-item border-0">Shared environment</li>
+                                    <li class="list-group-item border-0">Unlimited Bandwidth</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #ccff8b;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 py-3 z-index-1">
+                            <div class="card border-0 shadow">
+                                <div class="card-body text-center flex-column">
+                                    <img src="./eye-glasses-icon.svg" class="mb-2" style="width: 25px;" alt="">
+                                    <h6>START UP</h6>
+                                    <p>Best for small business owners</p>
+                                    <h3>$<span>299</span>/year</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0">2x CPU Power</li>
+                                    <li class="list-group-item border-0">Free Migration</li>
+                                    <li class="list-group-item border-0">Limited Reporting</li>
+                                    <li class="list-group-item border-0">50GB ALL SSD Storage</li>
+                                </ul>
+                                <div class="card-body text-center flex-column">
+                                    <button class="btn py-2 px-4" style="background-color: #F4F4F5;">Start 14 Day
+                                        Trial</button>
+                                    <p class="p-0">No credit card required</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Section -->
+    <div class="customers bg-dark py-5" id="customers">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="text-light">See what these customers have to say</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="usercol">
+                <div class="row py-5 justify-content-center">
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="grid-item item-1">
+                            <div class="userimg">
+                                <img src="./user1.png" class="w-75" style="height: auto;" alt="User 1">
+                            </div>
+                            <div class="userdescription">
+                                <p class="text-light">"I cannot believe that I have got a brand new landing page after
+                                    getting Omega. It was super easy to edit and faster and easier to work & increases
+                                    our exposure."</p>
+                                <h5 class="text-light">Jenny Wilson</h5>
+                                <p class="text-light">Chief Marketing Officer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="grid-item item-2">
+                            <div class="userdescription order-md-2 order-1">
+                                <p class="text-light">"Awesome experience working with the team at Heroes of Digital!
+                                    Always very responsive and continuously gives us suggestions to improve our
+                                    business."</p>
+                                <h5 class="text-light">Jacob Jones</h5>
+                                <p class="text-light">Co-Founder</p>
+                            </div>
+                            <div class="userimg order-md-1 order-2">
+                                <img src="./user2.png" class="w-75" style="height: auto;" alt="User 2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="grid-item item-3">
+                            <div class="userimg">
+                                <img src="./user3.png" class="w-75" style="height: auto;" alt="User 3">
+                            </div>
+                            <div class="userdescription">
+                                <p class="text-light">"You made it so simple. My new site is so much faster and easier
+                                    to work with than my old site. I just choose the page, make the change & it is a
+                                    good channel for us."</p>
+                                <h5 class="text-light">Leslie Alexander</h5>
+                                <p class="text-light">Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#monthly-tab').tab('show');
+        });
+    </script>
 </body>
+
 </html>
