@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap customize</title>
+    <title>EX-1 Bootstrap customize</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .h1class {
@@ -76,20 +76,29 @@
 
         .nav-tabs a {
             background-color: inherit;
-            border: none !important;
             outline: none;
             cursor: pointer;
             padding: 14px 16px;
             transition: 0.3s;
             font-size: 17px;
+            border: none !important;
             color: #a0a0a0;
         }
 
-        .nav-tabs a:hover {
+        .tabcustom1 .nav-tabs a:hover {
             background-color: #ccff8b;
         }
 
-        .nav-tabs a.active {
+        .tabcustom1 .nav-tabs a.active {
+            background-color: #12141D !important;
+            color: #ccff8b !important;
+            border-bottom: 2px solid #ccff8b !important;
+        }
+        .tabcustom2 .nav-tabs a:hover {
+            background-color: #ccff8b;
+        }
+
+        .tabcustom2 .nav-tabs a.active {
             background-color: #ccff8b !important;
             color: #000000 !important;
         }
@@ -129,9 +138,22 @@
             text-align: center;
             transition: transform 0.3s;
         }
+        .custombox
+        {
+            background-color: #ccff8b;
+        }
 
         .grid-item:hover {
             transform: scale(1.05);
+        }
+        .boxbutton
+        {
+            background-color: #12141D;
+            color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            height: fit-content;
+            padding: 15px 40px;
         }
 
         @media (max-width: 992px) {
@@ -150,7 +172,7 @@
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #12141d;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #12141d;">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./Logo.svg" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -184,7 +206,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div style="background-color: #12141d;">
+    <div class="py-5" style="background-color: #12141d;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 align-self-center g-3">
@@ -299,7 +321,7 @@
     </div>
 
     <!-- Tab Section -->
-    <div class="py-5" style="background-color: #12141d;">
+    <div class="py-5 tabcustom1" style="background-color: #12141d;">
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5 text-center">
@@ -371,7 +393,7 @@
     </div>
 
     <!-- Prising Section -->
-    <div class="container-fluid py-5" id="pricing">
+    <div class="container-fluid tabcustom2 py-5" id="pricing">
         <div class="container py-5">
             <div class="row py-5 justify-content-center flex-column align-items-center">
                 <h2>Choose your perfect web hosting plan</h2>
@@ -539,11 +561,13 @@
         </div>
     </div>
 
-    <!-- Client Section -->
-    <div class="customers bg-dark py-5" id="customers">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-                <h2 class="text-light">See what these customers have to say</h2>
+    <!-- Customers Section -->
+    <div class="customers py-5" style="background-color: #12141d;" id="customers">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <h2 class="text-light">See what these customers have to say</h2>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -598,8 +622,98 @@
         </div>
     </div>
 
+    <!-- Box Section -->
+     <div class="box-section py-5" style="background-color: #12141d;">
+        <div class="container">
+            <div class="row custombox justify-content-center py-5 rounded">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <h2 class="section-title mb-0 col-md-4">Stop worrying about hosting problem</h2>
+                    <button class="boxbutton">Sign Up Now</button>
+                </div>
+            </div>
+        </div>
+     </div>
 
+     <!-- Footer Section -->
+      <footer class="footer-section py-5" style="background-color: #12141d">
+        <div class="container">
+            <div class="row">
 
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-light">Company</h5>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">About</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Features</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Works</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Career</a>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-light">Help</h5>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">CUstomer Support</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Delivery Details</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Terms & Conditions</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Privacy Policy</a>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-light">Resources</h5>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Free eBooks</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Development Tutorial</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">How to - Blog</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Youtube Playlist</a>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-light">Links</h5>
+                    <div class="nav flex-column">
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Free eBooks</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Development Tutorial</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">How to - Blog</a>
+                        </li>
+                        <li class="nav-item mb-2" href="#">
+                            <a class="nav-link p-0 text-muted" href="#">Youtube Playlist</a>
+                        </li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
